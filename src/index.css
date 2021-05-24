@@ -188,9 +188,6 @@ body {
 /* environment ---- */
 
 
-.environment-section{
-  overflow-x: clip;
-}
 
 .environment-banner{
   background-image: url('./images/evironmentbg-shape.png');
@@ -201,6 +198,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -277,9 +275,7 @@ body {
 
 
 
-.technology-section{
-  overflow-x: clip;
-}
+
 
 
 .technology-banner{
@@ -291,6 +287,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -365,9 +362,6 @@ body {
 
 /* skill ------ */
 
-.skill-section{
-  overflow-x: clip;
-}
 
 .skill-banner{
   background-image: url('./images/skillbg-shape.png');
@@ -378,6 +372,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow-x: clip;
   position: relative;
 }
 
