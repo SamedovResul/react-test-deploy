@@ -118,7 +118,7 @@ body {
   border: none;
   background-color:#8872FF ;
   outline: none !important;
-  margin: 20px 15px 50px auto;
+  margin: 20px auto 50px 50px;
 }
 
 
@@ -188,6 +188,9 @@ body {
 /* environment ---- */
 
 
+.environment-section{
+  overflow-x: clip;
+}
 
 .environment-banner{
   background-image: url('./images/evironmentbg-shape.png');
@@ -198,8 +201,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: inherit;
-  overflow-x: clip;
   position: relative;
 }
 
@@ -276,6 +277,11 @@ body {
 
 
 
+.technology-section{
+  overflow-x: clip;
+}
+
+
 .technology-banner{
   background-image: url('./images/technologybg-shape.png');
   background-position: center;
@@ -285,8 +291,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: inherit;
-  overflow-x: clip;
   position: relative;
 }
 
@@ -361,6 +365,10 @@ body {
 
 /* skill ------ */
 
+.skill-section{
+  overflow-x: clip;
+}
+
 .skill-banner{
   background-image: url('./images/skillbg-shape.png');
   background-position: center;
@@ -370,8 +378,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-y: inherit;
-  overflow-x: clip;
   position: relative;
 }
 

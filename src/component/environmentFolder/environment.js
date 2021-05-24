@@ -109,7 +109,9 @@ const Environment = (props) =>{
 
 
     return(
-			<div>
+
+
+			<div className="environment-section">
 				
 					<animated.div className="environment-banner" style={container}>
 						<h1>Environment</h1>

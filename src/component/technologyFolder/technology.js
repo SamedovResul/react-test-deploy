@@ -99,7 +99,7 @@ const TecnologyBanner = (props) =>{
 
     
     return(
-			<div>
+			<div className="technology-section">
         <animated.div className="technology-banner" style={container}>
 					<h1>Technology</h1>
 					<animated.div className="technology-img1" style={ leafimg  } >

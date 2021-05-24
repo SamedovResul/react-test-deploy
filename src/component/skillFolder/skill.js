@@ -106,7 +106,7 @@ const SkillBanner =(props)=>{
 
 
     return(
-			<div className="test">
+			<div className="skill-section">
         <animated.div className="skill-banner" style={container}>
 					
 				<animated.div className="skill-img1" style={leafimg}  >
