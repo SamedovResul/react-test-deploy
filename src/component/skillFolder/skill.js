@@ -60,7 +60,7 @@ const SkillBanner =(props)=>{
 	// brush animation --------------
 	
 	const brushimg = useSpring({
-	to: [{top: '-48px', right: '50%' }],
+	to: [{top: '20px', right: '50%' }],
 
 
 	from: {top: '150px',
@@ -107,6 +107,26 @@ const SkillBanner =(props)=>{
 
     return(
 			<div className="skill-section">
+
+					<animated.div className="skill-img3" style={brushimg} >
+					
+
+					<Link to={{
+						pathname:'/homeBanner',
+						aboutProps:{
+							name: 'fromSkill'
+						}
+					}}>
+	
+						<img className='brush-img' src={brush} alt='img' >
+						</img>
+	
+					</Link>
+						
+	
+	
+					</animated.div>
+
         <animated.div className="skill-banner" style={container}>
 					
 				<animated.div className="skill-img1" style={leafimg}  >
@@ -128,7 +148,7 @@ const SkillBanner =(props)=>{
 				<h1>Skill</h1>
 				
 
-				<animated.div className="skill-img3" style={brushimg} >
+				{/* <animated.div className="skill-img3" style={brushimg} >
 					
 
 				<Link to={{
@@ -145,7 +165,7 @@ const SkillBanner =(props)=>{
 					
 
 
-				</animated.div>
+				</animated.div> */}
 
 				<animated.div className="skill-img2" style={gearimg} >
 

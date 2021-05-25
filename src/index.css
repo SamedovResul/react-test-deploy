@@ -198,8 +198,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  -ms-overflow-x: clip;
-  overflow-x: clip;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -288,8 +287,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: clip;
-  -ms-overflow-x: clip;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -373,19 +371,15 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  -ms-overflow-x: clip;
-  overflow-x: clip;
+  overflow-x: hidden;
   position: relative;
 }
 
 
 
 .skill-banner h1{
-  position: absolute;
   margin: auto 100px auto 100px;
   color: white;
-  
 }
 
 .skill-img2{
