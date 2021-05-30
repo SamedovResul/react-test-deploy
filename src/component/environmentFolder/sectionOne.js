@@ -12,7 +12,7 @@ const  SectionOne = () =>{
   return(
 
     
-  <div className="position">
+  <div className="position section-one">
     <div className="container bigScreenContainer">
       <div className="container-fluid">
         <div className="row" >

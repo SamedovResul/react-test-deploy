@@ -18,26 +18,23 @@ const Environment = (props) =>{
 
 
     const container = useSpring({
-			to: [{height: location? width <= 768 ?
-				"250px" : '400px' :
-				width <= 768 ?
-				"250px" : "400px"}],
+			to: [{height: width <= 768 && width > 480 ? location?  
+			'250px' : '300px' : width < 480 ? location?
+			'200px' : '400px' :'400px' }],
 
-
-  		from: {height:location? width <= 768 ?
-				"250px" : '400px' :
-				width <= 768 ?
-				"250px" : "550px"}
+  		from: {height: width <= 768 && width > 480 ? location?  
+			'250px' : '400px' : width < 480 ? location? 
+			'200px' : '400px' : location? '400px' : '550px'  }
 		})
 
 
 		// Leaf animation --------------
 
 		const leafimg = useSpring({
-			to: [{top: '-48px', left: '50%' }],
+			to: [{top: '20px', left: '50%' }],
 
 
-			from: {top: width <= 768 ? '80px' : '140px',
+			from: {top: width <= 768 ? '80px' : '210px',
 
 
 			left: location ? location.name === 'fromTechnology'?
@@ -112,21 +109,22 @@ const Environment = (props) =>{
 
 
 			<div className="environment-section">
+
+							<animated.div className="environment-img1" style={leafimg} >
+								
+								<Link to={{
+									pathname:'/homeBanner',
+									aboutProps:{
+										name: 'fromEnvironment'
+									}
+									}}>
+									<img  className='leaf-img' src={leaf} alt='img' ></img>
+								</Link>
+								
+							</animated.div>
 				
 					<animated.div className="environment-banner" style={container}>
 						<h1>Environment</h1>
-						<animated.div className="environment-img1" style={leafimg}  >
-								
-							<Link to={{
-								pathname:'/homeBanner',
-								aboutProps:{
-									name: 'fromEnvironment'
-								}
-							}}>
-								<img  className='leaf-img' src={leaf} alt='img' ></img>
-							</Link>
-							
-						</animated.div>
 						<animated.div className="environment-img2"  style={gearimg}>
 
 							<Link to={{

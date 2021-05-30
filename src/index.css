@@ -190,7 +190,7 @@ body {
 
 
 .environment-banner{
-  background-image: url('./images/evironmentbg-shape.png');
+  background-image: url('./images/environmentbg-shape.png');
   background-position: center;
   background-size:100% 100%;
   background-repeat: no-repeat;
@@ -207,7 +207,7 @@ body {
 }
 
 .environment-img1{
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   transform:translateX(-50%);
 }
@@ -250,17 +250,18 @@ body {
   
 }
 
-
+@media(max-width:480px){
+  .environment-img2 img{
+    width: 120px;
+  }
+  .environment-img3 img{
+    width: 120px;
+  }
+}
 
 @media(max-width:450px){
   .environment-img1 img{
     width: 80px;
-  }
-  .environment-img2 img{
-    width: 130px;
-  }
-  .environment-img3 img{
-    width: 130px;
   }
 }
 
@@ -307,7 +308,7 @@ body {
 }
 
 .technology-img2{
-  position: absolute;
+  position: fixed;
   transform:translateX(-50%);
   display: flex;
   justify-content: center;
@@ -344,18 +345,24 @@ body {
 
 
 
+@media(max-width:480px){
+  .technology-banner h1{
+    font-size: 25px;
+  }
+  .technology-img1 img{
+    width: 120px;
+  }
+  .technology-img3 img{
+    width: 120px;
+  }
+}
+
 @media(max-width:450px){
   .technology-banner h1{
     font-size: 25px;
   }
   .technology-img2 img{
     width: 80px;
-  }
-  .technology-img1 img{
-    width: 130px;
-  }
-  .technology-img3 img{
-    width: 130px;
   }
 }
 
@@ -442,6 +449,12 @@ body {
 /* HOME SECTIONS----------- */
 
 /* section 1  */
+
+.section-one{
+  height: 400px;
+  display: flex;
+  align-items: center;
+}
 
 .text-box{
   height: 300px;
@@ -579,6 +592,9 @@ body {
 @media(max-width:780px){
   .bigScreenContainer{
     display: none;
+  }
+  .section-one{
+    height: 500px;
   }
 }
 

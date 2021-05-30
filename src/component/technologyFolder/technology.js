@@ -15,8 +15,13 @@ const TecnologyBanner = (props) =>{
 	
 
     const container = useSpring({
-			to: [{height: location? width <= 768 ? "250px" : '400px' : width <= 768 ? "250px" : "400px"}],
-  		from: {height:location? width <= 768 ? "250px" : '400px' : width <= 768 ? "250px" : "550px"}
+			to: [{height: width <= 768 && width > 480 ? location?  
+			'250px' : '300px' : width < 480 ? location?
+			'200px' : '400px' :'400px' }],
+
+  		from: {height: width <= 768 && width > 480 ? location?  
+			'250px' : '400px' : width < 480 ? location? 
+			'200px' : '400px' : location? '400px' : '550px'  }
 		})
 
 		// Leaf animation --------------
@@ -51,13 +56,13 @@ const TecnologyBanner = (props) =>{
 		// Gear animation --------------
 
 		const gearimg   = useSpring({
-		to: [{top: '-48px', 
+		to: [{top: '20px', 
 
 					left: location ? 
 					location.name === 'fromEnvironment' ? 
 					'50%' : '50%' : '50%'
 				}],
-		from: {top: '97px', left: location ? 
+		from: {top: '210px', left: location ? 
 					location.name === 'fromEnvironment' ? 
 					'0%' : '100%' : '50%' 
 				},
@@ -100,6 +105,21 @@ const TecnologyBanner = (props) =>{
     
     return(
 			<div className="technology-section">
+
+				<animated.div className="technology-img2" style={ gearimg} >
+
+					<Link to={{
+						pathname:'/homeBanner',
+						aboutProps:{
+							name: 'fromTechnology'
+						}
+						}}>
+						<img className='gear-img' src={ circle} alt='img' >
+						</img>
+					</Link>
+
+				</animated.div>
+
         <animated.div className="technology-banner" style={container}>
 					<h1>Technology</h1>
 					<animated.div className="technology-img1" style={ leafimg  } >
@@ -118,21 +138,7 @@ const TecnologyBanner = (props) =>{
 					</Link>
 
 					</animated.div>
-					<animated.div className="technology-img2" style={ gearimg} >
-
-						
-							<Link to={{
-							pathname:'/homeBanner',
-							aboutProps:{
-								name: 'fromTechnology'
-							}
-						}}>
-							<img className='gear-img' src={ circle} alt='img' >
-							</img>
-						</Link>
-						
-						
-					</animated.div>
+					
 					<animated.div className="technology-img3" style={brushimg} >
 
 					<Link
