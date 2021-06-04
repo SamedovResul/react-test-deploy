@@ -19,16 +19,15 @@ const SkillBanner =(props)=>{
 	console.log(location)
 	
 
-    const container = useSpring({
-		to: [{height: location? width <= 768 ?
-				"250px" : '400px' :
-				width <= 768 ?
-				"250px" : "400px"}],
-		from: {height:location? width <= 768 ?
-			"250px" : '400px' :
-			width <= 768 ?
-			"250px" : "550px"}
-    })
+	const container = useSpring({
+		to: [{height: width <= 768 && width > 480 ? location?  
+		'250px' : '300px' : width < 480 ? location?
+		'200px' : '400px' :'400px' }],
+
+		from: {height: width <= 768 && width > 480 ? location?  
+		'250px' : '400px' : width < 480 ? location? 
+		'200px' : '400px' : location? '400px' : '550px'  }
+	})
 
 	// Leaf animation --------------
 
@@ -37,7 +36,7 @@ const SkillBanner =(props)=>{
 	left:location ? location.name === 'fromEnvironment'? 
 	'0%': '0%' : '0%' ,
 	
-	top: width <= 768 ? '37px' : '97px'
+	top: width <= 768 ? '37px' : '117px'
 	 }],
 
 
@@ -50,7 +49,7 @@ const SkillBanner =(props)=>{
 	location.name === 'fromEnvironment'? 
 	'-50px' : '37px' : '37px'  :  location ?
 	location.name === 'fromEnvironment'? 
-	'-100px' : '97px' : '97px'
+	'-100px' : '117px' : '117px'
 },
 	config: {
 		duration: 500
@@ -84,7 +83,7 @@ const SkillBanner =(props)=>{
 			location ? location.name === 'fromEnvironment'? 
 			'37px' : '37px' : '37px' : location ?
 			location.name === 'fromEnvironment'? 
-			'97px' : '97px' : '97px'
+			'117px' : '117px' : '117px'
 		}],
 		from: { 
 			right:  location ? 
@@ -97,7 +96,7 @@ const SkillBanner =(props)=>{
 			location ? location.name === 'fromEnvironment'? 
 			'37px' : '-97px' : '37px' : location ? 
 			location.name === 'fromEnvironment'? 
-			'97px' : '-97px' : '97px'
+			'117px' : '-117px' : '117px'
 		 },
 	config: {
 		duration: 500

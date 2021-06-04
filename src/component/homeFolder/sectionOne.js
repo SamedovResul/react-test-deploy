@@ -9,7 +9,6 @@ import MediaQuery from 'react-responsive'
 const  SectionOne = () =>{
 
   const videoSrc = video;
-  console.log(poster)
   return(
 
     

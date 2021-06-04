@@ -4,21 +4,10 @@ import img1 from '../../images/image-1.jpg';
 import img2 from '../../images/image-2.jpg';
 import img3 from '../../images/image-3.jpg';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import MediaQuery from 'react-responsive'
 
 const SectionFour = ( ) =>{
 
-  const elements =[
-    {
-      width: 1920,
-      height: 'auto'
-    },
-    {
-      width: 280,
-      height: 'auto'
-    }
-
-  ]
+  
   return(
     <SRLWrapper  >
       <div className="bg-div">

@@ -1,12 +1,11 @@
-import {React, useState } from 'react'
+import {React,  useState } from 'react'
 import {useSpring, animated} from 'react-spring'
+
 import { Link } from 'react-router-dom'
 import MediaQuery from 'react-responsive'
 import { FaBars, FaStream } from 'react-icons/fa';
 
-
-const NavBar = (props) =>{
-
+const NavBar = ( props) =>{
 	const [openSide, setopenSide ] = useState(false);
 
 	const handlerSide = function(){
@@ -18,26 +17,23 @@ const NavBar = (props) =>{
 		
 	}
 
-	console.log(openSide)
+
 
 	const sideanimation = useSpring({
 		to: [{right: openSide ? "0%" : "-50%"}],
-		from: {right: openSide ? "-50px" : "-50%"},
+		from: {right: openSide ? "-50%" : "-50%"},
 		config: {
 			duration: 600
 		}
 	})
 
-	console.log(props)
 
 	return(
 		<div className="stick-class">
 
 				<div className='nav-main-menu'>
 					<div className='nav-menu'>
-						<div className='logo'>
-							entesk
-						</div>
+						
 						<ul className='ul-nav'>
 					<li>
 						<Link to={{

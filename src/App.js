@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <NavBar  />
+        <NavBar component={HomeBanner} />
           <Switch>
             <Route path="/environment" component={environment} />
             <Route path="/technology" component={technology} />

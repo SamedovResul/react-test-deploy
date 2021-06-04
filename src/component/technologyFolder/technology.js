@@ -34,7 +34,7 @@ const TecnologyBanner = (props) =>{
 					location.name === 'fromEnvironment' ?
 					'37px' : '37px' : '37px' :location ? 
 					location.name === 'fromEnvironment' ?
-					'97px' : '97px' : '97px'
+					'117px' : '117px' : '117px'
 			 	}],
 
 
@@ -46,7 +46,7 @@ const TecnologyBanner = (props) =>{
 					location.name === 'fromEnvironment' ?
 					'-37px' : '37px' : '37px' : location ? 
 					location.name === 'fromEnvironment' ?
-					'-97px' : '97px' : '97px'
+					'-117px' : '117px' : '117px'
 				},
 		config: {
 			duration: 500
@@ -82,7 +82,7 @@ const TecnologyBanner = (props) =>{
 					location.name === 'fromEnvironment' ?
 					'37px' : '37px' : '37px' :location ? 
 					location.name === 'fromEnvironment' ?
-					'97px' : '97px' : '97px'
+					'117px' : '117px' : '117px'
 				}],
 
 		from: {right: location ? 
@@ -93,7 +93,7 @@ const TecnologyBanner = (props) =>{
 					location.name === 'fromEnvironment' ?
 					'37px' :  '-48px' : '37px': location ? 
 					location.name === 'fromEnvironment' ?
-					'97px' : '-110px' : '97px'
+					'117px' : '-110px' : '117px'
 					},
 			config: {
 				duration: 500

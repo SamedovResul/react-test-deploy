@@ -13,19 +13,18 @@ const Environment = (props) =>{
 
 	let location = props.location.aboutProps
 	const { innerWidth: width} = window;
-	console.log(width)
 		
 
 
-    const container = useSpring({
-			to: [{height: width <= 768 && width > 480 ? location?  
-			'250px' : '300px' : width < 480 ? location?
-			'200px' : '400px' :'400px' }],
+	const container = useSpring({
+		to: [{height: width <= 768 && width > 480 ? location?  
+		'250px' : '300px' : width < 480 ? location?
+		'200px' : '200px' :'400px' }],
 
-  		from: {height: width <= 768 && width > 480 ? location?  
-			'250px' : '400px' : width < 480 ? location? 
-			'200px' : '400px' : location? '400px' : '550px'  }
-		})
+		from: {height: width <= 768 && width > 480 ? location?  
+		'250px' : '400px' : width < 480 ? location? 
+		'200px' : '400px' : location? '400px' : '550px'  }
+	})
 
 
 		// Leaf animation --------------
@@ -68,7 +67,7 @@ const Environment = (props) =>{
 			location.name === 'fromTechnology' ?
 			 '-37px' : '37px' : '37px' : location ?  
 			 location.name === 'fromTechnology' ?
-				'-97px' : '97px' : '97px'
+				'-117px' : '117px' : '117px'
 			 },
 			config: {
 				duration: 500 
@@ -86,7 +85,7 @@ const Environment = (props) =>{
 			location.name === 'fromTechnology' ? 
 			'37px' : '37px' : '37px'   :    location ? 
 			location.name === 'fromTechnology' ?
-			'97px' : '97px' : '97px'
+			'117px' : '117px' : '117px'
 		,	
 		}],
   		from: {right: location ?
@@ -97,7 +96,7 @@ const Environment = (props) =>{
 			location.name === 'fromTechnology' ?  
 			'37px' : '-37px' : '37px'  :  location ? 
 			location.name === 'fromTechnology' ? 
-			'97px' : '-97px' : '97px'
+			'117px' : '-117px' : '117px'
 			},
 			config: {
 				duration: 500
