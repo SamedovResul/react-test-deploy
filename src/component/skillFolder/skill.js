@@ -20,14 +20,14 @@ const SkillBanner =(props)=>{
 	
 
 	const container = useSpring({
-		to: [{height: width <= 768 && width > 480 ? location?  
-		'250px' : '300px' : width < 480 ? location?
-		'200px' : '400px' :'400px' }],
+			to: [{height: width <= 768 && width >= 480 ? location?  
+			'250px' : '300px' : width < 480 ? location?
+			'200px' : '200px' :'400px' }],
 
-		from: {height: width <= 768 && width > 480 ? location?  
-		'250px' : '400px' : width < 480 ? location? 
-		'200px' : '400px' : location? '400px' : '550px'  }
-	})
+  		from: {height: width <= 768 && width > 480 ? location?  
+			'250px' : '400px' : width < 480 ? location? 
+			'200px' : '400px' : location? '400px' : '550px'  }
+		})
 
 	// Leaf animation --------------
 
@@ -59,10 +59,10 @@ const SkillBanner =(props)=>{
 	// brush animation --------------
 	
 	const brushimg = useSpring({
-	to: [{top: '20px', right: '50%' }],
+	to: [{top: '5%', right: '50%' }],
 
 
-	from: {top: '150px',
+	from: {top:  '25%' ,
 	right: location ? location.name === 'fromEnvironment'?
 	'0%' :  '-5%' : '23%' },
 	config: {

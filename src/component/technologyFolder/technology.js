@@ -15,9 +15,9 @@ const TecnologyBanner = (props) =>{
 	
 
     const container = useSpring({
-			to: [{height: width <= 768 && width > 480 ? location?  
+			to: [{height: width <= 768 && width >= 480 ? location?  
 			'250px' : '300px' : width < 480 ? location?
-			'200px' : '400px' :'400px' }],
+			'200px' : '200px' :'400px' }],
 
   		from: {height: width <= 768 && width > 480 ? location?  
 			'250px' : '400px' : width < 480 ? location? 
@@ -56,13 +56,13 @@ const TecnologyBanner = (props) =>{
 		// Gear animation --------------
 
 		const gearimg   = useSpring({
-		to: [{top: '20px', 
+		to: [{top: '5%', 
 
 					left: location ? 
 					location.name === 'fromEnvironment' ? 
 					'50%' : '50%' : '50%'
 				}],
-		from: {top: '210px', left: location ? 
+		from: {top: '25%', left: location ? 
 					location.name === 'fromEnvironment' ? 
 					'0%' : '100%' : '50%' 
 				},

@@ -143,7 +143,6 @@ body {
 .logo-image {
   position: fixed;
   top: 10px;
-  left: 20px;
   z-index: 100;
   width: 3%;
 }
@@ -190,7 +189,6 @@ body {
 
 
 .logo-img {
-  /* margin-top: 20px; */
   width: 30%;
   height: auto;
 }
@@ -220,10 +218,11 @@ body {
   align-items: center;
   justify-content: center;
   /* border: 1px solid black; */
+  margin-bottom: 10px;
 }
 
 .text-img {
-  width: 40% !important;
+  width: 40%;
 }
 
 
@@ -240,31 +239,112 @@ body {
   width: 15%;
   z-index: 1;
   transform: translateX(-50%);
-  box-shadow: 0 4px 20px 0 black, 0 6px 20px 0 black;
+  /* box-shadow: 0 4px 20px 0 black, 0 6px 20px 0 black; */
   border-radius: 100px;
+}
+
+@media(max-width:1199px) {
+  .logo-image {
+    width: 4%;
+  }
 }
 
 @media(max-width:991px) {
   .banner-style-logo {
-    width: 40%;
     height: 45%;
-    /* border: 1px solid black; */
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
+  }
+
+  .logo-img {
+    width: 30%;
+    height: auto;
+  }
+
+  .text-img {
+    width: 55%;
+  }
+
+  .logo-image {
+    width: 4.5%;
   }
 }
 
 @media(max-width:768px) {
+  .banner-style-logo {
+    height: 50%;
+  }
+
   .banner-text {
     margin-top: 20px;
   }
+
+  .logo-img {
+    width: 24%;
+  }
+
+  .logo-image {
+    width: 5.5%;
+  }
 }
 
+@media(max-width: 620px) {
+  .logo-image {
+    width: 7%;
+  }
+}
+
+@media(max-width:600px) {
+  .logo-img {
+    width: 30%;
+  }
+
+  .text-img {
+    width: 75%;
+  }
+}
+
+@media(max-width:500px) {
+  .text-img {
+    width: 80%;
+  }
+
+  .logo-image {
+    width: 8%;
+  }
+}
+
+@media(max-width:470px) {
+  .logo-img {
+    width: 40%;
+  }
+
+  .logo-image {
+    width: 9%;
+  }
+}
+
+@media(max-width:400px) {
+  .banner-style-logo {
+    height: 45%;
+  }
+
+  .logo-img {
+    width: 30%;
+  }
+
+  .text-img {
+    width: 85%;
+  }
+
+  .logo-image {
+    width: 11%;
+  }
+}
+
+@media(max-width:350px) {
+  .logo-image {
+    width: 11.5%;
+  }
+}
 
 /* environment ---- */
 
@@ -313,6 +393,14 @@ body {
   transform: translateX(-50%);
 }
 
+.environment-img2 img {
+  width: 200px;
+}
+
+.environment-img3 img {
+  width: 200px;
+}
+
 .environment-img3 {
   position: absolute;
   transform: translateX(50%);
@@ -336,6 +424,9 @@ body {
     font-size: 30px;
   }
 
+  .environment-img1 img {
+    width: 80px;
+  }
 }
 
 @media(max-width:480px) {
@@ -350,7 +441,7 @@ body {
 
 @media(max-width:450px) {
   .environment-img1 img {
-    width: 80px;
+    width: 70px;
   }
 }
 
@@ -390,11 +481,19 @@ body {
   transform: translateX(-50%);
 }
 
+.technology-img1 img {
+  width: 200px;
+}
 
 .technology-img3 {
   position: absolute;
   transform: translateX(50%);
 }
+
+.technology-img3 img {
+  width: 200px;
+}
+
 
 .technology-img2 {
   position: fixed;
@@ -404,15 +503,17 @@ body {
   z-index: 5;
 }
 
+.technology-img2 img {
+  width: 100px;
+}
+
 .technology-img2 a {
   position: unset !important;
   display: flex;
   justify-content: center;
 }
 
-.technology-img2 img {
-  width: 100px;
-}
+
 
 
 /* technology mediaquery -- */
@@ -432,6 +533,10 @@ body {
 
   .technology-banner h1 {
     font-size: 30px;
+  }
+
+  .technology-img2 img {
+    width: 80px;
   }
 }
 
@@ -457,7 +562,7 @@ body {
   }
 
   .technology-img2 img {
-    width: 80px;
+    width: 70px;
   }
 }
 
@@ -484,16 +589,23 @@ body {
   color: white;
 }
 
-.skill-img2 {
-  position: absolute;
-  transform: translateX(50%);
-}
-
 .skill-img1 {
   position: absolute;
   transform: translateX(-50%);
 }
 
+.skill-img1 img {
+  width: 200px;
+}
+
+.skill-img2 {
+  position: absolute;
+  transform: translateX(50%);
+}
+
+.skill-img2 img {
+  width: 200px;
+}
 
 .skill-img3 {
   position: fixed;
@@ -501,14 +613,16 @@ body {
   transform: translateX(50%);
 }
 
+.skill-img3 img {
+  width: 100px;
+}
+
 .skill-img3 a {
   display: flex;
   justify-content: center;
 }
 
-.skill-img3 img {
-  width: 100px;
-}
+
 
 /* skill mediaquery  */
 
@@ -546,7 +660,7 @@ body {
 
 @media(max-width:450px) {
   .skill-img3 img {
-    width: 80px;
+    width: 70px;
   }
 }
 

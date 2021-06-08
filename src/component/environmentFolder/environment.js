@@ -30,10 +30,10 @@ const Environment = (props) =>{
 		// Leaf animation --------------
 
 		const leafimg = useSpring({
-			to: [{top: '20px', left: '50%' }],
+			to: [{top: '5%', left: '50%' }],
 
 
-			from: {top: width <= 768 ? '80px' : '210px',
+			from: {top: width <= 768 ? '25%' : '25%',
 
 
 			left: location ? location.name === 'fromTechnology'?

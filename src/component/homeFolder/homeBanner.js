@@ -31,7 +31,11 @@ const HomeBanner = (props) =>{
 	}
 	console.log(openSide)
 	const sideanimation = useSpring({
-		to: [{left: location? openSide ? "-5%" : "1%" : openSide ? "1%" : "-5%"}],
+		to: [{left: width <= 400 ? location? openSide ? 
+				"-12%" : "1%" : openSide ? "1%" : "-12%":
+				location? 
+				openSide ? "-12%" : "1%" : openSide ? "1%" : "-12%"
+				}],
 		from: {left:"-5%"},
 		config: {
 			duration: 500
@@ -46,12 +50,13 @@ const HomeBanner = (props) =>{
 // container height animation------------------
 
 	const container = useSpring({
-		to: [{height: width <= 768 ? location ? "350px" : '400px':
-				location ? "550px" : '550px',
+		to: [{height: width <= 991 && width >= 768 ?
+			  "500px" : width >= 390 && width <= 768 ? 
+				"300px" : width <= 390 ? "240px" : "550px"  ,
 
 				zIndex: location? openSide? -5 : 0 : openSide? 0 : -5
 				}],
-		from: {height: width === 768 ?  location ? "400px" :'550px':
+		from: {height: width === 767 ?  location ? "400px" :'550px':
 				location ? "400px" :'550px',
 			
 				
@@ -62,17 +67,40 @@ const HomeBanner = (props) =>{
 
 	const bannerStyleText = useSpring({
 		to: [{
-			top: width <= 991 ? location ?
-			openSide? '60%' : '14%' : 
-			openSide? '14%' : '60%' :
-			location ?
-			openSide? '430px' : '110px' : 
-			openSide? '110px' : '430px' 
-			,
+			top: width <= 991 && width >= 769 ? location ?
+			openSide? '74%' : '16%' : 
+			openSide? '16%' : '74%' :
+			width <= 769 &&  width >= 450 ?  location ?
+			openSide? '78%' : '19%' : 
+			openSide? '19%' : '78%' :
+			width <= 450 && width >= 390 ? location ? 
+			openSide? '72%' : '17%' : 
+			openSide? '17%' : '72%' :
+			width <= 390 ? location ? 
+			openSide? '75%' : '20%' : 
+			openSide? '20%' : '75%' :
+			location ? 
+			openSide? '75%' : '17%' : 
+			openSide? '17%' : '75%' ,
 
-			fontSize: location ? openSide? '25px' : '15px' : openSide? '15px' : '25px'
+			fontSize: width <= 991 && width >= 769 ? 
+			location ? 
+			openSide? '20px' : '15px' :
+			openSide? '15px' : '20px': 
+			width <= 767 &&  width >= 450 ? 
+			location ?
+			openSide? '18px' : '15px' :
+			openSide? '15px' : '18px': 
+			width <= 450 ? 
+			location ? 
+			openSide? '15px' : '12px':
+			openSide? '12px' : '15px':
+			location ? 
+			openSide? '25px' : '15px':
+			openSide? '15px' : '25px'  ,
+
 		}],
-		from: {top: '80px'},
+		from: {top: '75%'},
 		config: {
 			duration: 500
 		}
@@ -81,17 +109,24 @@ const HomeBanner = (props) =>{
 // banner style animation------------------------------
 
 	const bannerStyleLogo = useSpring({
-		to: [{top: width <= 991 ? location?
-				 openSide? '0%' : '-27%' : 
-				 openSide? '-27%' : '0%' :
-				 location?
-				 openSide? '0px' : '-170px' : 
-				 openSide? '-170px' : '0px' ,
+		to: [{top: width <= 991 && width >= 768 ? location?
+				openSide? '8%' : '-25%' : 
+				openSide? '-25%' : '8%' :
+				width <= 768 &&  width >= 390 ?
+				location?
+				openSide? '0%' : '-25%' : 
+				openSide? '-25%' : '0%' :
+				width <= 390 ? location?
+				openSide? '0%' : '-20%' : 
+				openSide? '-20%' : '0%' :
+				location?
+				openSide? '0%' : '-30%' : 
+				openSide? '-30%' : '0%' ,
 
 
 				paddingTop: location? openSide? '20px' : '0px': openSide? '0px' : '20px' ,
 	}],
-		from: {top: location? '-290px' : '0px'},
+		from: {top: location? '-60%' : '0%'},
 		config: {
 			duration: 500
 		}
@@ -100,18 +135,46 @@ const HomeBanner = (props) =>{
 // leaf img animation----------------------------------
 
 	const leafimg = useSpring({
-		to: [{left: location? openSide? '39%' : '30%' : openSide? '30%' : '39%' ,
+		to: [{left: width <= 767 && width >= 600 ?
+					location? 
+					openSide? '37%' : '30%' : openSide? '30%' : '37%': 
+				 	width <= 600 && width >= 430 ? location? 
+					openSide? '36%' : '30%' : openSide? '30%' : '36%':
+					width <= 430 ? 
+					location? 
+					openSide? '33%' : '30%' : openSide? '30%' : '33%':
+					location? 
+					openSide? '39%' : '30%' : openSide? '30%' : '39%',
 
 			
-				top: width <= 991 ? location? 
-				openSide ? '45%' : '24%' : 
-				openSide ? '24%' : '45%' :
+				top: width <= 991 && width >= 768 ? location? 
+				openSide ? '55%' : '24%' : 
+				openSide ? '24%' : '55%' :
+				width >= 400 && width <= 767 ?  location ?
+				openSide ? '51%' : '35%' : 
+				openSide ? '35%' : '51%' :
+				width <= 400 ? location ? 
+				openSide ? '50%' : '35%' : 
+				openSide ? '35%' : '50%' :
+				location ?
+				openSide ? '55%' : '30%' : 
+				openSide ? '30%' : '55%' ,
+
+
+				width: width <= 700 && width >= 600?  
 				location? 
-				openSide ? '300px' : '160px' : 
-				openSide ? '160px' : '300px' ,
+				openSide ? '10%': '15%' : openSide ? '15%' : '10%' :
+				width <= 600 && width >= 430?
+				location? 
+				openSide ? '12%': '15%' : openSide ? '15%' : '12%':
+				width <= 429 ? 
+				location?
+				openSide ? '13%': '15%' : openSide ? '15%' : '13%':
+				location ?
+				openSide ? '8%': '15%' : openSide ? '15%' : '8%'
 
-
-		width: location? openSide ? '8%' : '15%' : openSide ? '15%' : '8%'
+		
+		
 		}],
   	from: {left: location? 
 			location.name === 'fromNavication' ? 
@@ -122,8 +185,8 @@ const HomeBanner = (props) =>{
 
 
 			top: location? location.name === 'fromNavication' ? 
-			"-200px" : location.name === 'fromEnvironment' ? 
-			'-90px' : '117px' :  '117px'
+			"-50%" : location.name === 'fromEnvironment' ? 
+			'-15%' : '30%' :  '55%'
 		},
 			config: {
 				duration: 500
@@ -134,16 +197,43 @@ const HomeBanner = (props) =>{
 
 		const brushimg = useSpring({
 			to: [{
-				left: location? openSide? '61%' : '70%' : openSide? '70%' : '61%' ,
-				
-				top: width <= 991 ? location? 
-				openSide ? '45%' : '24%' : 
-				openSide ? '24%' : '45%' :
-				location? 
-				openSide ? '300px' : '160px' : 
-				openSide ? '160px' : '300px' ,
+				left: width <= 767 && width >= 600 ?
+					location? 
+					openSide? '63%' : '70%' : openSide? '70%' : '63%':
+					width <= 600 && width >= 430 ?
+					location? 
+					openSide? '64%' : '70%' : openSide? '70%' : '64%':
+					width <= 430?
+					location? 
+					openSide? '67%' : '70%' : openSide? '70%' : '67%':
+					location?
+					openSide? '61%' : '70%' : openSide? '70%' : '61%',
 
-				width: location? openSide ? '8%' : '15%' : openSide ? '15%' : '8%'
+				
+				top: width <= 991 && width >= 768 ? location? 
+				openSide ? '55%' : '24%' : 
+				openSide ? '24%' : '55%' :
+				width >= 400 && width <= 767 ?  location ?
+				openSide ? '51%' : '35%' : 
+				openSide ? '35%' : '51%' :
+				width <= 400 ? location ? 
+				openSide ? '50%' : '35%' : 
+				openSide ? '35%' : '50%' :
+				location ?
+				openSide ? '55%' : '30%' : 
+				openSide ? '30%' : '55%' ,
+
+				width: width <= 700 && width >= 600?  
+				location? 
+				openSide ? '10%': '15%' : openSide ? '15%' : '10%' :
+				width <= 600 && width >= 430?
+				location? 
+				openSide ? '12%': '15%' : openSide ? '15%' : '12%':
+				width <= 429 ? 
+				location?
+				openSide ? '13%': '15%' : openSide ? '15%' : '13%':
+				location ?
+				openSide ? '8%': '15%' : openSide ? '15%' : '8%'
 			}],
 				from: {left: location? 	
 				location.name === 'fromNavication' ?
@@ -154,8 +244,8 @@ const HomeBanner = (props) =>{
 
 
 				top: location? location.name === 'fromNavication' ? 
-						"-200px" : location.name === 'fromSkill' ? 
-						'-90px' : '117px' :  '117px'},
+						"-50%" : location.name === 'fromSkill' ? 
+						'-15%' : '30%' :  '55%'},
 				config: {
 					duration: 500
 				}
@@ -167,15 +257,31 @@ const HomeBanner = (props) =>{
 				to: [{
 					left: '50%',
 
-					top: width <= 991 ? location? 
-					openSide ? '45%' : '24%' : 
-					openSide ? '24%' : '45%' :
-					location? 
-					openSide ? '300px' : '160px' : 
-					openSide ? '160px' : '300px' ,
+				top: width <= 991 && width >= 768 ? location? 
+				openSide ? '55%' : '24%' : 
+				openSide ? '24%' : '55%' :
+				width >= 400 && width <= 767 ?  location ?
+				openSide ? '51%' : '35%' : 
+				openSide ? '35%' : '51%' :
+				width <= 400 ? location ? 
+				openSide ? '50%' : '35%' : 
+				openSide ? '35%' : '50%' :
+				location ?
+				openSide ? '55%' : '30%' : 
+				openSide ? '30%' : '55%' ,
 
 
-					width: location? openSide ? '8%' : '15%' : openSide ? '15%' : '8%'
+				width: width <= 700 && width >= 600?  
+				location? 
+				openSide ? '10%': '15%' : openSide ? '15%' : '10%' :
+				width <= 600 && width >= 430?
+				location? 
+				openSide ? '12%': '15%' : openSide ? '15%' : '12%':
+				width <= 429 ? 
+				location?
+				openSide ? '13%': '15%' : openSide ? '15%' : '13%':
+				location ?
+				openSide ? '8%': '15%' : openSide ? '15%' : '8%'
 					}],
 					from: {left: location? 
 					location.name === 'fromNavication' ?
@@ -186,8 +292,8 @@ const HomeBanner = (props) =>{
 
 
 					top: location? location.name === 'fromNavication' ? 
-						"-200px" : location.name === 'fromTechnology' ? 
-						'-90px' : '117px' :  '117px',},
+						"-50%" : location.name === 'fromTechnology' ? 
+						'-15%' : '35%' :  '55%',},
 					config: {
 						duration: 500
 					}
