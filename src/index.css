@@ -81,7 +81,7 @@ body {
 
 /* navication for mobile */
 
-@media(max-width:777px) {
+@media(max-width:781px) {
   .nav-menu {
     display: none;
   }
@@ -378,7 +378,7 @@ body {
 
 .environment-img1 {
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   transform: translateX(-50%);
 }
 
@@ -613,7 +613,7 @@ body {
 
 .skill-img3 {
   position: fixed;
-  z-index: 1000;
+  z-index: 10;
   transform: translateX(50%);
 }
 
@@ -641,6 +641,10 @@ body {
 
   .skill-img3 a {
     margin: auto;
+  }
+
+  .skill-img3 img {
+    width: 80px;
   }
 
   .skill-banner h1 {
