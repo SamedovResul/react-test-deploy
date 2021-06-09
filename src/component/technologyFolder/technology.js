@@ -7,6 +7,7 @@ import circle from '../../images/circle.png'
 import SectionOne from './sectionOne'
 import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
+import FooterSection from './footerSection'
 
 const TecnologyBanner = (props) =>{
 
@@ -157,6 +158,7 @@ const TecnologyBanner = (props) =>{
 			<SectionOne />
 			<SectionTwo />
 			<SectionThree />
+			<FooterSection />
 			</div>
     )
 }

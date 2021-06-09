@@ -29,8 +29,9 @@ const NavBar = ( props) =>{
 
 
 	return(
-		<div className="stick-class">
-
+		<> 
+			<article className="stick-class">
+				
 				<div className='nav-main-menu'>
 					<div className='nav-menu'>
 						
@@ -53,9 +54,10 @@ const NavBar = ( props) =>{
 						</ul>
 					</div>
 
+				</div>
 
-					
-				<MediaQuery maxDeviceWidth={780}  >
+			</article>
+			<MediaQuery maxDeviceWidth={780}  >
 					<animated.div style={sideanimation} className="sidebar">
 						<button className="side-burger" onClick={handlerSide}>
 							<FaStream />
@@ -72,10 +74,8 @@ const NavBar = ( props) =>{
 					<button className="main-burger" onClick={handlerSide}>
 						<FaBars />
 					</button>
-				</MediaQuery>
-				</div>
-
-		</div>
+			</MediaQuery>
+		</>
 	)
 }
 

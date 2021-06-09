@@ -7,6 +7,7 @@ import circle from '../../images/circle.png'
 import SectionOne from './sectionOne'
 import SectionTwo from './sectionTwo'
 import SectionThree from './sectionThree'
+import FooterSection from './footerSection'
 
 
 
@@ -187,6 +188,7 @@ const SkillBanner =(props)=>{
 				<SectionOne />
 				<SectionTwo />
 				<SectionThree />
+				<FooterSection />
 			</div>
     )
 }

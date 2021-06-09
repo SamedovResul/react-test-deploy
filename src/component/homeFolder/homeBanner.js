@@ -50,7 +50,8 @@ const HomeBanner = (props) =>{
 // container height animation------------------
 
 	const container = useSpring({
-		to: [{height: width <= 991 && width >= 768 ?
+		to: [{height: width <= 1800 && width >= 1400 ?
+			 	"700px" : width <= 991 && width >= 768 ?
 			  "500px" : width >= 390 && width <= 768 ? 
 				"300px" : width <= 390 ? "240px" : "550px"  ,
 
@@ -71,8 +72,8 @@ const HomeBanner = (props) =>{
 			openSide? '74%' : '16%' : 
 			openSide? '16%' : '74%' :
 			width <= 769 &&  width >= 450 ?  location ?
-			openSide? '78%' : '19%' : 
-			openSide? '19%' : '78%' :
+			openSide? '75%' : '19%' : 
+			openSide? '19%' : '75%' :
 			width <= 450 && width >= 390 ? location ? 
 			openSide? '72%' : '17%' : 
 			openSide? '17%' : '72%' :
@@ -83,21 +84,29 @@ const HomeBanner = (props) =>{
 			openSide? '75%' : '17%' : 
 			openSide? '17%' : '75%' ,
 
-			fontSize: width <= 991 && width >= 769 ? 
+			fontSize: width >= 1400 && width <= 1800 ?
 			location ? 
-			openSide? '20px' : '15px' :
-			openSide? '15px' : '20px': 
-			width <= 767 &&  width >= 450 ? 
+			openSide? '2.2vw' : '1.2vw' :
+			openSide? '1.2vw' : '2.2vw':
+			width <= 991 && width >= 769 ? 
+			location ? 
+			openSide? '2.2vw' : '1.6vw' :
+			openSide? '1.6vw' : '2.2vw': 
+			width <= 767 &&  width >= 600 ? 
 			location ?
-			openSide? '18px' : '15px' :
-			openSide? '15px' : '18px': 
-			width <= 450 ? 
+			openSide? '2.5vw' : '1.6vw' :
+			openSide? '1.6vw' : '2.5vw': 
+			width <= 600 && width >= 450 ? 
 			location ? 
-			openSide? '15px' : '12px':
-			openSide? '12px' : '15px':
+			openSide? '2.8vw' : '2.2vw':
+			openSide? '2.2vw' : '2.8vw':
+			width <= 450 ?
 			location ? 
-			openSide? '25px' : '15px':
-			openSide? '15px' : '25px'  ,
+			openSide? '3.3vw' : '2.2vw':
+			openSide? '2.2vw' : '3.3vw':
+			location ? 
+			openSide? '2.2vw' : '1.2vw':
+			openSide? '1.2vw' : '2.2vw'  ,
 
 		}],
 		from: {top: '75%'},
@@ -319,7 +328,7 @@ const HomeBanner = (props) =>{
 						<animated.div style={bannerStyleText} className="banner-style-text" >
 							<p>Environment</p>
 							<p>Technology</p>
-							<p>Skill</p>
+							<p>Skills</p>
 						</animated.div>
 
 							<Link  className='link environment' to='/environment'>

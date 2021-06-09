@@ -113,13 +113,17 @@ body {
   background-color: #482AFF;
   outline: none !important;
   margin: auto 15px auto auto;
+  position: fixed;
+  top: 15px;
+  right: 0px;
+  z-index: 9;
 }
 
 .side-burger {
   border: none;
   background-color: #482AFF;
   outline: none !important;
-  margin: 20px auto 50px 50px;
+  margin: 20px 20px 50px auto;
 }
 
 
@@ -711,11 +715,12 @@ body {
 }
 
 
-.vjs-icon-play:before,
+.vjs-icon-play,
 .video-js .vjs-big-play-button .vjs-icon-placeholder:before,
-.video-js .vjs-play-control .vjs-icon-placeholder:before {
+.video-js .vjs-play-control .vjs-icon-placeholder {
   content: "" !important;
 }
+
 
 
 .video-js {
@@ -757,6 +762,17 @@ body {
   border: none !important;
   border-radius: 0.3em;
   transition: all 0.4s;
+}
+
+.vjs-has-started .vjs-control-bar {
+  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.1s, opacity 0.1s;
+  width: 84% !important;
+  margin: 0px auto 1px auto;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 .video {
@@ -956,6 +972,11 @@ body {
 }
 
 /* section 2 mediaquery */
+@media(max-width: 1800px) and (min-width: 1124px) {
+  .slick-slide>div {
+    width: 75%;
+  }
+}
 
 @media(max-width:1024px) {
   .bottom-div {
@@ -1503,6 +1524,16 @@ body {
 }
 
 /* section 6 mediaquery */
+
+@media(max-width: 1800px) and (min-width: 1400px) {
+  .squer-div {
+    padding: 0px 10px 0px 10px;
+  }
+
+  .squer-div p:nth-child(2) {
+    font-size: medium;
+  }
+}
 
 @media(max-width:1024px) {
   .section-6-main-div .slick-center .circle-div {

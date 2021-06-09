@@ -17,7 +17,8 @@ const SectionTwo = ()=>{
       centerPadding: "0px",
       slidesToShow: 3,
       autoplay: true,
-      speed: 5000,
+      pauseOnHover: true,
+      autoplaySpeed: 2000,
       dots: true,
       responsive: [
         {
