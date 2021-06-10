@@ -979,6 +979,7 @@ body {
 @media(max-width: 1800px) and (min-width: 1124px) {
   .slick-slide>div {
     width: 75%;
+    height: auto;
   }
 }
 

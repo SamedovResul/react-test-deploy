@@ -57,8 +57,10 @@ const HomeBanner = (props) =>{
 
 				zIndex: location? openSide? -5 : 0 : openSide? 0 : -5
 				}],
-		from: {height: width === 767 ?  location ? "400px" :'550px':
-				location ? "400px" :'550px',
+		from: {
+			height: width === 767 ?
+			location ? "400px" :'550px':
+			location ? "400px" :'550px',
 			
 				
 			}
@@ -68,45 +70,52 @@ const HomeBanner = (props) =>{
 
 	const bannerStyleText = useSpring({
 		to: [{
-			top: width <= 991 && width >= 769 ? location ?
-			openSide? '74%' : '16%' : 
-			openSide? '16%' : '74%' :
-			width <= 769 &&  width >= 450 ?  location ?
-			openSide? '75%' : '19%' : 
-			openSide? '19%' : '75%' :
+			top: width >= 1400 && width <= 1800 ? location ?
+			openSide? '32.5rem' : '7.3rem' : 
+			openSide? '7.3rem' : '32.5rem' :
+			width <= 991 && width >= 769 ? location ?
+			openSide? '22rem' : '4.4rem' : 
+			openSide? '4.4rem' : '22rem' :
+			width <= 769 &&  width >= 600 ? 
+			location ?
+			openSide? '13.8rem' : '3.3rem' :
+			openSide? '3.3rem' : '13.8rem': 
+			width <= 600 &&  width >= 450 ?  location ?
+			openSide? '14.5rem' : '3.3rem' : 
+			openSide? '3.3rem' : '14.5rem' :
 			width <= 450 && width >= 390 ? location ? 
 			openSide? '72%' : '17%' : 
 			openSide? '17%' : '72%' :
 			width <= 390 ? location ? 
-			openSide? '75%' : '20%' : 
-			openSide? '20%' : '75%' :
+			openSide? '10.8rem' : '2.6rem' : 
+			openSide? '2.6rem' : '10.8rem' :
 			location ? 
-			openSide? '75%' : '17%' : 
-			openSide? '17%' : '75%' ,
+			openSide? '26.5rem' : '5.5rem' : 
+			openSide? '5.5rem' : '26.5rem' ,
 
 			fontSize: width >= 1400 && width <= 1800 ?
 			location ? 
-			openSide? '2.2vw' : '1.2vw' :
-			openSide? '1.2vw' : '2.2vw':
+			openSide? '2.1vw' : '1.1vw' :
+			openSide? '1.1vw' : '2.1vw':
 			width <= 991 && width >= 769 ? 
 			location ? 
-			openSide? '2.2vw' : '1.6vw' :
-			openSide? '1.6vw' : '2.2vw': 
-			width <= 767 &&  width >= 600 ? 
+			openSide? '2.1vw' : '1.5vw' :
+			openSide? '1.5vw' : '2.1vw': 
+			width <= 768 &&  width >= 600 ? 
 			location ?
-			openSide? '2.5vw' : '1.6vw' :
-			openSide? '1.6vw' : '2.5vw': 
+			openSide? '2.4vw' : '1.4vw' :
+			openSide? '1.4vw' : '2.4vw': 
 			width <= 600 && width >= 450 ? 
 			location ? 
-			openSide? '2.8vw' : '2.2vw':
-			openSide? '2.2vw' : '2.8vw':
+			openSide? '2.7vw' : '2.1vw':
+			openSide? '2.1vw' : '2.7vw':
 			width <= 450 ?
 			location ? 
-			openSide? '3.3vw' : '2.2vw':
-			openSide? '2.2vw' : '3.3vw':
+			openSide? '3.1vw' : '2.3vw':
+			openSide? '2.3vw' : '3.1vw':
 			location ? 
-			openSide? '2.2vw' : '1.2vw':
-			openSide? '1.2vw' : '2.2vw'  ,
+			openSide? '2.1vw' : '1.1vw':
+			openSide? '1.1vw' : '2.1vw'  ,
 
 		}],
 		from: {top: '75%'},

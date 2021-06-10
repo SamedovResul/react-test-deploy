@@ -54,6 +54,12 @@ const NavBar = ( props) =>{
 						</ul>
 					</div>
 
+					<MediaQuery maxDeviceWidth={780}>
+						<button className="main-burger" onClick={handlerSide}>
+						<FaBars />
+						</button>
+					</MediaQuery>
+
 				</div>
 
 			</article>
@@ -71,9 +77,9 @@ const NavBar = ( props) =>{
 						</ul>
 
 					</animated.div>
-					<button className="main-burger" onClick={handlerSide}>
+					{/* <button className="main-burger" onClick={handlerSide}>
 						<FaBars />
-					</button>
+					</button> */}
 			</MediaQuery>
 		</>
 	)
