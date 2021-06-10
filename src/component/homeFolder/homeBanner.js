@@ -111,8 +111,8 @@ const HomeBanner = (props) =>{
 			openSide? '2.1vw' : '2.7vw':
 			width <= 450 ?
 			location ? 
-			openSide? '3.1vw' : '2.3vw':
-			openSide? '2.3vw' : '3.1vw':
+			openSide? '3.1vw' : '2.2vw':
+			openSide? '2.2vw' : '3.1vw':
 			location ? 
 			openSide? '2.1vw' : '1.1vw':
 			openSide? '1.1vw' : '2.1vw'  ,
